@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col s4" *ngFor="let pok of pokemon" >
+      <div class="col s6" >
+        <img src="{{ pok.picture }}" alt="" />
+      </div>
+      <div class="col s6" >
+        <p class="z-depth-2" pkmnappBorderCard="red">
+          {{ pok.name }} <br />
+          {{ pok.created | date:"dd/MM/YYYY"}}<br/>
+          <span *ngFor="let type of pok.types" class="{{ type|pokemonTypeColor }}">
+            {{ type }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
