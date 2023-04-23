@@ -20,6 +20,7 @@ export class PokemonService {
       "Insecte",
       "Normal",
       "Electrik",
+      "Poison",
       "Fée",
       "Vol",
       "Combat",
