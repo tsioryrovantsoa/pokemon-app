@@ -5,6 +5,7 @@ import { Pokemon } from '../pokemon';
   selector: 'app-add-pokemon',
   template: `
     <h2 class="center">Ajouter ny pokemon</h2>
+    <app-loader *ngIf="!pokemon"></app-loader>
     <app-pokemon-form [pokemon]="pokemon"></app-pokemon-form>
   `
 })

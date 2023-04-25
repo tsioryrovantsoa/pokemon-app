@@ -10,6 +10,7 @@ import { PokemonService } from '../pokemon.service';
     <p *ngIf="pokemon" class="center">
       <img [src]="pokemon.picture"/>
     </p>
+    <app-loader *ngIf="!pokemon"></app-loader>
     <app-pokemon-form *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-form>
   `,
   styles: [
