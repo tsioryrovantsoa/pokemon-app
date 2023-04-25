@@ -1,4 +1,6 @@
 <div class="row">
+
+    <app-search-pokemon></app-search-pokemon>
     <div class="col s4" *ngFor="let pok of pokemon" (click)="goToPokemon(pok)" >
       <div class="col s6" >
         <img src="{{ pok.picture }}" alt="" />

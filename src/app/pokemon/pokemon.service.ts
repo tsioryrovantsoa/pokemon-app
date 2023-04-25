@@ -43,6 +43,17 @@ export class PokemonService {
     );
   }
 
+  searchPokemonList(query: string): Observable<Pokemon[]> {
+    if (query.length <= 1) {
+      return of([]);
+    }
+
+    return this.http.get<Pokemon[]>(`api/pokemons/?name=${query}`).pipe(
+      tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, []))
+    );
+  }
+
   deletePokemonById(pokemonId: number): Observable<null> {
     return this.http.delete(`api/pokemons/${pokemonId}`).pipe(
       tap((response) => this.log(response)),
